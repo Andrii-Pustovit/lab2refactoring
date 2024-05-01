@@ -1,53 +1,31 @@
 package task4;
 
 public class Customer {
+    private PersonalInfo personalInfo;
+    private ContactInfo contactInfo;
 
-    private String firstName;
-
-    private String lastName;
-
-    private String phoneNumber;
-
-    private String email;
-
-
-
-    // Методи для зміни даних користувача
-
-    public void changeName(String firstName, String lastName) {
-
-        this.firstName = firstName;
-
-        this.lastName = lastName;
-
+    public Customer(PersonalInfo personalInfo, ContactInfo contactInfo) {
+        this.personalInfo = personalInfo;
+        this.contactInfo = contactInfo;
     }
-
-
-
-    public void changeContactInfo(String phoneNumber, String email) {
-
-        this.phoneNumber = phoneNumber;
-
-        this.email = email;
-
-    }
-
-
 
     // Методи для виведення даних користувача
-
     public void displayFullName() {
-
-        System.out.println(firstName + " " + lastName);
-
+        System.out.println(personalInfo.getFirstName() + " " + personalInfo.getLastName());
     }
-
-
 
     public void displayContactInfo() {
-
-        System.out.println(phoneNumber + ", " + email);
-
+        System.out.println(contactInfo.getPhoneNumber() + ", " + contactInfo.getEmail());
     }
 
+    // Методи для зміни даних користувача
+    public void changeName(String firstName, String lastName) {
+        personalInfo.setFirstName(firstName);
+        personalInfo.setLastName(lastName);
+    }
+
+    public void changeContactInfo(String phoneNumber, String email) {
+        contactInfo.setPhoneNumber(phoneNumber);
+        contactInfo.setEmail(email);
+    }
 }

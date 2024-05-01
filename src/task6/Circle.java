@@ -1,7 +1,11 @@
 package task6;
 
-public class Circle extends Shape {
+// Клас для кола
+public class Circle {
+    // Додаткові методи та поля класу Circle можуть бути тут
 
-    // Клас для кола
-
+    public Circle(Color color) {
+        super();
+    }
 }
+

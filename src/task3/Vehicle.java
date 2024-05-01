@@ -1,11 +1,13 @@
 package task3;
 
 public class Vehicle {
+    private final Movable movable;
 
-    public void move() {
-
-        // Використання Car або Bicycle
-
+    public Vehicle(Movable movable) {
+        this.movable = movable;
     }
 
+    public void move() {
+        movable.move();
+    }
 }

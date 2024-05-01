@@ -1,9 +1,13 @@
 package task6;
 
 public class Shape {
+    private Color color;
 
-    // Базовий клас для геометричних фігур
+    public Shape(Color color) {
+        this.color = color;
+    }
 
+    public Color getColor() {
+        return color;
+    }
 }
-
-

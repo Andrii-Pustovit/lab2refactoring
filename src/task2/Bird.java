@@ -1,7 +1,14 @@
-package task2;
+package task2;public class Bird {
 
-public class Bird extends Animal {
+    private Animal animal;
+
+    public Bird() {
+        this.animal = new Animal();
+    }
 
     // Додаткові методи для птахів
 
+    public void move() {
+        animal.move();
+    }
 }
